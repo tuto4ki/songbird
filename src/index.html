@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Song Bird</title>
+</head>
+<body>
+  <div class="wrapper">
+      
+    <header class="header">
+      <div class="header-wrapper">
+        <a href="../songbird/"><img src="./assets/images/logo.svg" alt="Logo" class="logo"></a>
+        <h1 class="h1">SongBird</h1>
+        <nav class="header-nav">
+          <ul class="header-list" id="main-nav" >
+            <li class="header-item list-item"><a href="../songbird/" class="link link-active" data-language="home">Главная</a></li>
+            <li class="header-item list-item"><p class="link" data-language="game">Играть</p></li>
+            <li class="header-item list-item"><p class="link"  data-language="gallery">Галерея</p></li>
+            <li class="header-item list-item"><p class="link"  data-language="language">English</p></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main" id="main-page">
+      <div class="main-bird"></div>
+
+      <div class="game hidden">
+        <section class="questions">
+          <ul class="questions-list">
+            <li class="questions-item list-item" data-language="training">Разминка</li>
+            <li class="questions-item list-item" data-language="passerines">Воробьиные</li>
+            <li class="questions-item list-item" data-language="forest">Лесные птицы</li>
+            <li class="questions-item list-item" data-language="songbirds">Певчие птицы</li>
+            <li class="questions-item list-item" data-language="predator">Хищные птицы</li>
+            <li class="questions-item list-item" data-language="sea">Морские птицы</li>
+            <li class="questions-item list-item score"><span data-language="score">Очки</span>: <span class="score-number">0</span></li>
+          </ul>
+        </section>
+        
+        <section class="current">
+          <div class="current-bird">
+            <img src="./assets/images/birdDefault.png" alt="Bird" class="current-picture">
+            <div class="current-description">
+              <h2 class="current-name">******</h2>
+              <div class="current-load hidden">
+                <div class="player-info">
+                  <div class="player-controls">
+                    <button class="play player-icon"></button>
+                  </div>
+                  <div class="progress">
+                    <div class="duration-player">
+                      <div class="progress-active"></div>
+                    </div>
+                    <div class="duration-timer">
+                      <div class="progress-current"></div>
+                      <div class="progress-duration"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="song">
+                  <div class="song-icon">
+                    <svg width="20" height="20" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M832 352v1088q0 26-19 45t-45 19-45-19l-333-333h-262q-26 0-45-19t-19-45v-384q0-26 19-45t45-19h262l333-333q19-19 45-19t45 19 19 45zm384 544q0 76-42.5 141.5t-112.5 93.5q-10 5-25 5-26 0-45-18.5t-19-45.5q0-21 12-35.5t29-25 34-23 29-36 12-56.5-12-56.5-29-36-34-23-29-25-12-35.5q0-27 19-45.5t45-18.5q15 0 25 5 70 27 112.5 93t42.5 142zm256 0q0 153-85 282.5t-225 188.5q-13 5-25 5-27 0-46-19t-19-45q0-39 39-59 56-29 76-44 74-54 115.5-135.5t41.5-173.5-41.5-173.5-115.5-135.5q-20-15-76-44-39-20-39-59 0-26 19-45t45-19q13 0 26 5 140 59 225 188.5t85 282.5zm256 0q0 230-127 422.5t-338 283.5q-13 5-26 5-26 0-45-19t-19-45q0-36 39-59 7-4 22.5-10.5t22.5-10.5q46-25 82-51 123-91 192-227t69-289-69-289-192-227q-36-26-82-51-7-4-22.5-10.5t-22.5-10.5q-39-23-39-59 0-26 19-45t45-19q13 0 26 5 211 91 338 283.5t127 422.5z" fill="#fff"/></svg>
+                  </div>
+                  <input type="range" class="input-song" min="0" max="1" step=".01" value=".5">
+                </div>
+              </div>
+              <div class="load" data-language="load">Загрузка...</div>
+              
+              
+            </div>
+          </div>
+        </section>
+        
+        <div class="game-footer">
+          <section class="answers">
+            <ul class="answers-list">
+            </ul>
+            <div class="answer-next-step not-active" data-language="next">Следующий вопрос</div>
+          </section>
+        
+          <section class="show">
+            <p class="show-exercise" data-language="exercise"></p>
+            <div class="show-preview hidden"> 
+              <div class="show-bird">
+                <img src="./assets/images/birdDefault.png" alt="Bird" class="show-picture">
+                <div>
+                  <h3 class="h3"></h3>
+                  <p class="species"></p>
+                  <div class="show-player">
+                    <div class="current-load hidden">
+                      <div class="player-info">
+                        <div class="player-controls">
+                          <button class="play player-icon"></button>
+                        </div>
+                        <div class="progress">
+                          <div class="duration-player">
+                            <div class="progress-active"></div>
+                          </div>
+                          <div class="duration-timer">
+                            <div class="progress-current"></div>
+                            <div class="progress-duration"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="song">
+                        <div class="song-icon">
+                          <svg width="20" height="20" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M832 352v1088q0 26-19 45t-45 19-45-19l-333-333h-262q-26 0-45-19t-19-45v-384q0-26 19-45t45-19h262l333-333q19-19 45-19t45 19 19 45zm384 544q0 76-42.5 141.5t-112.5 93.5q-10 5-25 5-26 0-45-18.5t-19-45.5q0-21 12-35.5t29-25 34-23 29-36 12-56.5-12-56.5-29-36-34-23-29-25-12-35.5q0-27 19-45.5t45-18.5q15 0 25 5 70 27 112.5 93t42.5 142zm256 0q0 153-85 282.5t-225 188.5q-13 5-25 5-27 0-46-19t-19-45q0-39 39-59 56-29 76-44 74-54 115.5-135.5t41.5-173.5-41.5-173.5-115.5-135.5q-20-15-76-44-39-20-39-59 0-26 19-45t45-19q13 0 26 5 140 59 225 188.5t85 282.5zm256 0q0 230-127 422.5t-338 283.5q-13 5-26 5-26 0-45-19t-19-45q0-36 39-59 7-4 22.5-10.5t22.5-10.5q46-25 82-51 123-91 192-227t69-289-69-289-192-227q-36-26-82-51-7-4-22.5-10.5t-22.5-10.5q-39-23-39-59 0-26 19-45t45-19q13 0 26 5 211 91 338 283.5t127 422.5z" fill="#fff"/></svg>
+                        </div>
+                        <input type="range" class="input-song" min="0" max="1" step=".01" value=".5">
+                      </div>
+                    </div>
+                    
+                    <div class="load" data-language="load">Загрузка...</div>
+                  </div>
+                </div>
+              </div>
+              <div class="show-description"></div>
+            </div>
+            
+          </section>
+        </div> 
+      </div>
+      <div class="game-end hidden">
+        <div>
+          <p class="game-end-title">
+            <span class="game-end-all" data-language="congratulation"></span>
+            <span class="game-end-again"><span data-language="endgame"></span> <span class="number-score"></span> <span data-language="quiz"></span></span>
+          </p>
+          <button class="new-game" data-language="trygame"></button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+        <ul class="footer-nav">
+          <li class="footer-item list-item">
+            <a href="https://github.com/tuto4ki">
+              <img src="./assets/images/githubLogo.svg" alt="GitHub" class="footer-link">
+            </a>
+          </li>
+          <li class="footer-item list-item">© 2022</li>
+          <li class="footer-item list-item">
+            <a href="https://rs.school/js/">
+              <img src="./assets/images/rsSchoolLogo.svg" alt="RS School" class="rs-logo footer-link">
+            </a>
+          </li>
+        </ul>
+    </footer>
+
+  </div>
+</body>
+</html>
